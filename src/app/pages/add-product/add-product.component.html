@@ -1,3 +1,101 @@
-<p>
-  add-product works!
-</p>
+
+    <app-header></app-header>
+    <main>
+      <div class="container">
+        
+        <h1>Ürün Ekle</h1>
+
+        <div class="add-product">
+                
+            <ul class="tab">
+                <li><a class="active" href="javascript:makeItOpen(0);">1. GENEL BİLGİLER</a></li>
+                <li><a href="javascript:makeItOpen(1);">2. AÇIKLAMA</a></li>
+                <li><a href="javascript:makeItOpen(2);">3. SORUMLULAR</a></li>
+                <li><a href="javascript:makeItOpen(3);">4. DETAY</a></li>
+            </ul>
+
+            <form action="" onsubmit="return false;" method="POST" id="form">
+
+                <div id="tab1">
+
+                    <label>Ürün / Proje İsmi</label>
+                    <input type="text" name="title" onmouseover="createTip('Ürün / Proje İsmi', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
+
+                    <label>Ürün / Proje Fotoğrafları</label>
+                    <input type="file" name="product_images[]" multiple="true" onmouseover="createTip('Ürün / Proje Fotoğrafları', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
+
+                    <label>Ürün / Proje Etiketleri</label>
+                    <input type="text" name="tags" onmouseover="createTip('Ürün / Proje Etiketleri', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
+
+                </div>
+
+                <div id="tab2">
+
+                    <label>Ürün Açıklaması</label>
+                    <textarea name="long_desc" rows="14" onmouseover="createTip('Ürün Açıklaması', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"></textarea>
+
+                </div>
+
+                <div id="tab3">
+
+                    <label>İletişim Sorumlusu</label>
+                    <input type="text" name="contact_name" onmouseover="createTip('İletişim Sorumlusu', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
+
+                    <label>İletişim Sorumlusu E-mail</label>
+                    <input type="text" name="contact_email" onmouseover="createTip('İletişim Sorumlusu E-mail', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
+
+                    <label>Ürün Sorumlusu</label>
+                    <input type="text" name="project_owner" onmouseover="createTip('Ürün Sorumlusu', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
+
+                    <label>Ürün Sorumlusu E-nail</label>
+                    <input type="text" name="project_email" onmouseover="createTip('Ürün Sorumlusu E-mail', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
+
+                </div>
+
+                <div id="tab4">
+
+                    <label>Bütçe</label>
+                    <input type="text" name="budget" onmouseover="createTip('Bütçe Bilgisi', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
+
+                    <label>İmplementasyon</label>
+                    <select name="stars" onmouseover="createTip('İmplementasyon Zorluğu', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" > 
+                        <option value="">İmplementasyon Kolaylığını Seçiniz</option>
+                        <option value="0">0 Yıldız</option>
+                        <option value="1">1 Yıldız</option>
+                        <option value="2">2 Yıldız</option>
+                        <option value="3">3 Yıldız</option>
+                        <option value="4">4 Yıldız</option>
+                        <option value="5">5 Yıldız</option>
+                    </select>
+
+                    <label>Kullanılabilirlik</label>
+                    <select name="usability" onmouseover="createTip('Kullanılabilirlik Zorluğu', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" > 
+                        <option value="">Kullanım Kolaylığını Seçiniz</option>
+                        <option value="0">Çok Kolay</option>
+                        <option value="1">Kolay</option>
+                        <option value="2">Orta</option>
+                        <option value="3">Zor</option>
+                        <option value="4">Çok Zor</option>
+                    </select>
+
+                </div>
+
+                <button class="prev" id="tab-prev">Önceki Adım</button>
+                <button class="next" id="tab-next">Sonraki Adım</button>
+
+                <button class="done" id="tab-done">Kaydet</button>
+
+            </form> 
+
+        </div>
+
+        <div class="add-product-tooltip">
+            <h4>Ürün / Proje İsmi</h4>
+            <p>Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.</p>
+        </div>
+
+      </div>
+      <div style="clear:both;"></div>
+    </main>
+    <app-footer></app-footer>
+  

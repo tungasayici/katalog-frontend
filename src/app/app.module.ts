@@ -15,6 +15,7 @@ import { DetailComponent } from './pages/detail/detail.component';
 import { SearchComponent } from './pages/search/search.component';
 import { HeadComponent } from './components/head/head.component';
 import { HomeComponent } from './pages/home/home.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { HomeComponent } from './pages/home/home.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,99 @@
-<p>
-  detail works!
-</p>
+
+    <app-header></app-header>
+    <main>
+      <div class="container">
+      
+        <app-filters></app-filters>
+        
+        <div class="content detail">
+
+            <article>
+                <img src="" />
+                <h1><a href="#">{{productItem[0].product.title}}</a></h1>
+                <span>{{productItem[0].product.createdTime}}</span>
+                
+                <p>{{productItem[0].product.description}}</p>
+                
+                <div class="tags">
+                  <a href="{{productItem[0].product.url}}">{{productItem[0].tags}}</a>';
+                  
+                </div>
+                
+                <hr />
+                
+                <div class="details">
+                  <ul>
+                    <li>
+                      <h1>DT KONTAKT</h1>
+                      <img src="{{productItem[0].consumer.profileUrl}}" />
+                      <p>{{productItem[0].consumer.fullName}} <a href="mailto:{{productItem[0].consumer.fullName}}"> <i class="fa fa-envelope"></i> </a></p>
+                    </li>
+                    <li>
+                      <h1>PROJEYİ YAPAN FİRMA</h1>
+                      <img src="{{productItem[0].consumer.profileUrl}}" />
+                      <p>{{productItem[0].consumer.companyName}}<a href="{{productItem[0].consumer.companyName}}"> <i class="fa fa-external-link"></i> </a></p>
+                    </li>
+                  </ul>
+                </div>
+                
+              </article>
+              
+              <aside>
+                <h1><a href="#">Diğer Bilgiler</a></h1>
+                
+                <hr />
+                
+                <ul>
+                  <li>
+                    <h1>Bütçe Aralığı</h1>
+                    <span>{{productItem[0].consumer.price}}</span>
+                  </li>
+                  <li>
+                    <h1>İMPLEMENTASYON KOLAYLIĞI</h1>
+                    <span>{{productItem[0].consumer.upVoteCount}}</span> 
+                    <img src="../../../assets/images/star-filled.png">
+                      <img src="../../../assets/images/star-emtpy.png">
+                  </li>
+                  <li>
+                    <h1>KULLANIM KOLAYLIĞI</h1>
+                    <span>{{productItem[0].consumer.difficulty}} </span>
+                  </li>
+                </ul>
+              </aside>
+              
+              <div class="slider">
+                <div id="slider" class="slider-border">
+                  <ul>
+                    <li><img src="'.$slider_items[$i].'" /></li>';
+                     
+                  </ul>
+                </div>
+              </div>
+              
+              
+
+        </div>
+
+        <div class="comments">
+                
+            <!--<img src="images/comments.png" />-->
+            <div id="disqus_thread"></div>
+            <script>
+              (function() { // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+              s.src = 'https://hightechcatalog.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+              })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                      
+          </div>
+
+
+      </div>
+      
+
+      <div style="clear:both;"></div>
+    </main>
+    <app-footer></app-footer>

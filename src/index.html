@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-
+    <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>DT Catalogue</title>
@@ -23,6 +23,35 @@
       ga('create', 'UA-101557260-1', 'auto');
       ga('send', 'pageview');
       </script>
+
+      <script type="text/javascript">
+
+        function createTip(title, content){
+  
+            $(".add-product-tooltip > h4").hide(300, function() {
+                $(this).html(title).show(100);
+                $(".add-product-tooltip > p").html(content);
+            });
+            
+        }
+  
+        // TAB
+        var tabIndex = 0;
+  
+        function makeItOpen(tabIndex = 0){
+            if( tabIndex == 0 ){ $('#tab1').show(); $('#tab2').hide(); $('#tab3').hide(); $('#tab4').hide(); $('#tab-next').show(); $('#tab-done').hide(); $(".tab>li:nth-child(1)>a").addClass("active"); $(".tab>li:nth-child(2)>a").removeClass("active"); $(".tab>li:nth-child(3)>a").removeClass("active"); $(".tab>li:nth-child(4)>a").removeClass("active"); }
+            else if( tabIndex == 1 ){ $('#tab1').hide(); $('#tab2').show(); $('#tab3').hide(); $('#tab4').hide(); $('#tab-next').show(); $('#tab-done').hide(); $(".tab>li:nth-child(1)>a").removeClass("active"); $(".tab>li:nth-child(2)>a").addClass("active"); $(".tab>li:nth-child(3)>a").removeClass("active"); $(".tab>li:nth-child(4)>a").removeClass("active"); }
+            else if( tabIndex == 2 ){ $('#tab1').hide(); $('#tab2').hide(); $('#tab3').show(); $('#tab4').hide(); $('#tab-next').show(); $('#tab-done').hide(); $(".tab>li:nth-child(1)>a").removeClass("active"); $(".tab>li:nth-child(2)>a").removeClass("active"); $(".tab>li:nth-child(3)>a").addClass("active"); $(".tab>li:nth-child(4)>a").removeClass("active"); }
+            else if( tabIndex == 3 ){ $('#tab1').hide(); $('#tab2').hide(); $('#tab3').hide(); $('#tab4').show(); $('#tab-next').hide(); $('#tab-done').show(); $(".tab>li:nth-child(1)>a").removeClass("active"); $(".tab>li:nth-child(2)>a").removeClass("active"); $(".tab>li:nth-child(3)>a").removeClass("active"); $(".tab>li:nth-child(4)>a").addClass("active"); }
+            else{ makeItOpen(); }
+        }
+  
+        makeItOpen();
+  
+        $("#tab-next").click(function(){ tabIndex++; makeItOpen(tabIndex); }); //next button
+        $("#tab-prev").click(function(){ tabIndex--; makeItOpen(tabIndex); }); //prev button
+  
+    </script>
   </head>
 <body>
   <app-root></app-root>
