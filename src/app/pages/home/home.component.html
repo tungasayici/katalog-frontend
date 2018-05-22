@@ -1,0 +1,25 @@
+
+    <app-header></app-header>
+    <main>
+      <div class="container">
+      
+        <app-filters></app-filters>
+        
+        <div class="content">
+          <h1>Ürünler</h1>
+                <article>
+                  <img src="../../../assets/images/filter-icons/location.png" />
+                  <h1><a href="detail.php?id='.$product->id.'">Ürün Başlık</a></h1>
+                  
+                  <p>Kısa Açıklama</p>
+                  
+                  <div class="tags">
+                    <a href="search.php?q='.$tag_name.'">Etiket Adı</a>
+                  </div>
+                </article>
+        </div>
+      </div>
+      <div style="clear:both;"></div>
+    </main>
+    <app-footer></app-footer>
+  
