@@ -9,13 +9,13 @@
 
             <article>
                 <img src="" />
-                <h1><a href="#">{{productItem[0].product.title}}</a></h1>
-                <span>{{productItem[0].product.createdAt}}</span>
+                <h1><a href="#">{{productItem.product.title}}</a></h1>
+                <span>{{productItem.product.createdAt}}</span>
                 
-                <p>{{productItem[0].product.description}}</p>
+                <p>{{productItem.product.description}}</p>
                 
                 <div class="tags">
-                  <a href="{{productItem[0].product.webUrl}}">{{productItem[0].tags[0].name}} {{productItem[0].tags[1].name}}</a>';
+                  <a href="{{productItem.product.webUrl}}">{{productItem.tags.name}} {{productItem.tags[1].name}}</a>';
                   
                 </div>
                 
@@ -25,13 +25,13 @@
                   <ul>
                     <li>
                       <h1>DT KONTAKT</h1>
-                      <img src="{{productItem[0].consumer.profileImageUrl}}" />
-                      <p>{{productItem[0].consumer.fullName}} <a href="mailto:{{productItem[0].consumer.fullName}}"> <i class="fa fa-envelope"></i> </a></p>
+                      <img src="{{productItem.consumer.profileImageUrl}}" />
+                      <p>{{productItem.consumer.fullName}} <a href="mailto:{{productItem.consumer.fullName}}"> <i class="fa fa-envelope"></i> </a></p>
                     </li>
                     <li>
                       <h1>PROJEYİ YAPAN FİRMA</h1>
-                      <img src="{{productItem[0].consumer.profileImageUrl}}" />
-                      <p>{{productItem[0].consumer.companyName}}<a href="{{productItem[0].consumer.companyName}}"> <i class="fa fa-external-link"></i> </a></p>
+                      <img src="{{productItem.consumer.profileImageUrl}}" />
+                      <p>{{productItem.consumer.companyName}}<a href="{{productItem.consumer.companyName}}"> <i class="fa fa-external-link"></i> </a></p>
                     </li>
                   </ul>
                 </div>
@@ -46,17 +46,17 @@
                 <ul>
                   <li>
                     <h1>Bütçe Aralığı</h1>
-                    <span>{{productItem[0].product.price}}</span>
+                    <span>{{productItem.product.price}}</span>
                   </li>
                   <li>
                     <h1>İMPLEMENTASYON KOLAYLIĞI</h1>
-                    <span>{{productItem[0].product.upVoteCount}}</span> 
+                    <span>{{productItem.product.upVoteCount}}</span> 
                     <img src="../../../assets/images/star-filled.png">
                       <img src="../../../assets/images/star-emtpy.png">
                   </li>
                   <li>
                     <h1>KULLANIM KOLAYLIĞI</h1>
-                    <span>{{productItem[0].product.difficulty}} </span>
+                    <span>{{productItem.product.difficulty}} </span>
                   </li>
                 </ul>
               </aside>

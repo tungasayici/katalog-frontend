@@ -16,6 +16,8 @@ import { SearchComponent } from './pages/search/search.component';
 import { HeadComponent } from './components/head/head.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { SigninComponent } from './pages/signin/signin.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { AppRoutingModule } from './/app-routing.module';
     DetailComponent,
     SearchComponent,
     HeadComponent,
-    HomeComponent
+    HomeComponent,
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
