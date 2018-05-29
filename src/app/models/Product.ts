@@ -7,15 +7,19 @@ export class Product {
     "type": string;
     "imageUrl": string;
     "difficulty": string;
-    "url": string;
+    "webUrl": string;
     "upVoteCount": number;
     "downVoteCount": number;
-    "isSuitableForDG": string;
-    "createdTime": string;
-    "updatedTime": string;
-    "tags": string;
     "commentCount": number;
+    "notes": string;
+    "customers": string;
+    "founders": string;
+    "detailUrl": string;
+    "kpiList": string;
+    "dataChannelId": number;
+    "financalLevel": number;
+    "companyName": string;
     "updatedAt": string;
     "createdAt": string;
-    "active": boolean;
+    "isActive": boolean;
   }

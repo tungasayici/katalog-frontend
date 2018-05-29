@@ -1,10 +1,12 @@
 export class InvestmentLog {
-    "createdAt": string;
     "id": number;
-    "investmentNeed": string;
-    "note": string;
     "productId": number;
-    "scannedDate": string;
+    "note": string;
+    "score": number;
+    "fundingNeed": number;
+    "valuation": number;
+    "evalDate": string;
     "updatedAt": string;
-    "value": string;
+    "createdAt": string;
+    "currency": string
 }

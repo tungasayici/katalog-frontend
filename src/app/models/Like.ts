@@ -1,10 +1,8 @@
 export class Like{
-    "consumerId": number;
-    "createdAt": string;
-    "createdTime": string;
     "id": number;
-    "productId": number;
-    "upVote": boolean;
+    "isUpVote": boolean;
     "updatedAt": string;
-    "updatedTime": string;
+    "createdAt": string;
+    "consumerId": number;
+    "productId": number;
 }

@@ -10,12 +10,12 @@
             <article>
                 <img src="" />
                 <h1><a href="#">{{productItem[0].product.title}}</a></h1>
-                <span>{{productItem[0].product.createdTime}}</span>
+                <span>{{productItem[0].product.createdAt}}</span>
                 
                 <p>{{productItem[0].product.description}}</p>
                 
                 <div class="tags">
-                  <a href="{{productItem[0].product.url}}">{{productItem[0].product.tags}}</a>';
+                  <a href="{{productItem[0].product.webUrl}}">{{productItem[0].tags[0].name}} {{productItem[0].tags[1].name}}</a>';
                   
                 </div>
                 
@@ -25,12 +25,12 @@
                   <ul>
                     <li>
                       <h1>DT KONTAKT</h1>
-                      <img src="{{productItem[0].consumer.profileUrl}}" />
+                      <img src="{{productItem[0].consumer.profileImageUrl}}" />
                       <p>{{productItem[0].consumer.fullName}} <a href="mailto:{{productItem[0].consumer.fullName}}"> <i class="fa fa-envelope"></i> </a></p>
                     </li>
                     <li>
                       <h1>PROJEYİ YAPAN FİRMA</h1>
-                      <img src="{{productItem[0].consumer.profileUrl}}" />
+                      <img src="{{productItem[0].consumer.profileImageUrl}}" />
                       <p>{{productItem[0].consumer.companyName}}<a href="{{productItem[0].consumer.companyName}}"> <i class="fa fa-external-link"></i> </a></p>
                     </li>
                   </ul>

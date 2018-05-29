@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Response, RequestOptions, Headers, HttpModule } from '@angular/http';
-import { HttpClientModule } from '@angular/common/http';
 
-import {IProductItem} from "../../interfaces/ProductItem";
+import { ProductItem } from "../../models/masterModels/ProductItem";
 
 @Component({
   selector: 'app-home',
@@ -11,7 +10,7 @@ import {IProductItem} from "../../interfaces/ProductItem";
 })
 export class HomeComponent implements OnInit {
 
-  public productItem: IProductItem[];
+  public productItem = new Array<ProductItem>();
 
   constructor(private http: Http) { 
     /*let headers = new Headers();
@@ -20,7 +19,7 @@ export class HomeComponent implements OnInit {
     opts.headers = headers; */
     let url = "https://katalog-backend.herokuapp.com/product/all?isActive=true"; 
     this.http.get(url).subscribe( 
-        result => {this.productItem = result.json() as IProductItem[];
+        result => {this.productItem = result.json() as Array<ProductItem>;
         console.log(this.productItem);
     },err=>{
       console.log(err);

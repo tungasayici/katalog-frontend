@@ -1,13 +1,14 @@
 export class Consumer {
-    "active": boolean;
-    "bio": string;
-    "companyName": string;
-    "createdAt": string;
-    "email": string;
-    "fullName": string;
     "id": number;
+    "username": string;
+    "email": string;
     "jobTitle": string;
-    "profileUrl": string;
+    "bio": string;
+    "profileImageUrl": string;
+    "companyName": string;
+    "fullName": string;
     "updatedAt": string;
-    "userName": string;
+    "createdAt": string;
+    "active": boolean;
+    "roles": Array<String>;
 }
