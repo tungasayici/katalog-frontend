@@ -1,6 +1,7 @@
 export class Consumer {
     "id": number;
     "username": string;
+    "password": string;
     "email": string;
     "jobTitle": string;
     "bio": string;
