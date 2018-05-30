@@ -11,7 +11,7 @@ import { ProductItem } from "../../models/masterModels/ProductItem";
 })
 export class DetailComponent implements OnInit {
 
-  public productItem = new Array<ProductItem>();
+  public productItem = new ProductItem;
 
   constructor(private route: ActivatedRoute, private http: Http) { 
     this.getAllProducts();
@@ -26,7 +26,7 @@ export class DetailComponent implements OnInit {
       opts.headers = headers; */
       let url = "https://katalog-backend.herokuapp.com/product/"+params['productID']; 
       this.http.get(url).subscribe( 
-          result => {this.productItem = result.json() as Array<ProductItem>;
+          result => {this.productItem = result.json() as ProductItem;
           console.log(this.productItem);
       },err=>{
         console.log(err);
