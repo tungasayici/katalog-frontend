@@ -1,6 +1,8 @@
 //Install express server
 const express = require('express');
 const path = require('path');
+
+//FOR FİLE UPLOAD
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var busboy = require('connect-busboy');
@@ -10,6 +12,8 @@ const app = express();
 var fs = require('fs');
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/DTKatalog'));
+
+//FOR FİLE UPLOAD
 app.use(logger('dev'));
 app.use(busboy({ immediate: true }));
 
@@ -19,7 +23,8 @@ app.get('/*', function(req,res) {
 });
 
 
-
+//FOR FİLE UPLOAD
+/*
 app.post('/upload-file', function(req, res, next) {
 
     
@@ -52,6 +57,7 @@ app.post('/upload-file', function(req, res, next) {
       req.pipe(req.busboy);
     }
   });
+*/
 
 // Start the app by listening on the default Heroku port
 app.listen(process.env.PORT || 8080);

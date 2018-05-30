@@ -21,13 +21,30 @@ export class FileUploadComponent implements OnInit {
     this.selectedFile = <File>event.target.files[0];
   }
 
+  getBase64(file) {
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+      console.log(reader.result);
+    };
+    reader.onerror = function (error) {
+      console.log('Error: ', error);
+    };
+ }
+
   onUpload() {
     const fd = new FormData();
     this.showMessage = false;
     console.log(this.selectedFile.name);
     fd.append('file', this.selectedFile, this.selectedFile.name);
-    console.log(fd);
-    this.http.post(`/upload-file`, fd, {
+    console.log(this.selectedFile);
+    var base64Image = this.getBase64(this.selectedFile);
+    console.log(base64Image);
+
+    //POST EDİLECEK
+
+    
+    /*this.http.post(`/upload-file`, fd, {
       reportProgress: true, observe: 'events'
     }).subscribe( (event: HttpEvent<any>) => {
       switch (event.type) {
@@ -57,7 +74,7 @@ export class FileUploadComponent implements OnInit {
       this.message = "Something went wrong";
       this.showMessage = true;
       this.slimLoadingBarService.reset();
-    });
+    });*/
   }
 
 

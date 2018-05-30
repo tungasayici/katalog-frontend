@@ -1,162 +1,203 @@
+<app-header>
+</app-header>
+<main>
+  <div class="container">
 
-    <app-header></app-header>
-    <main>
-      <div class="container">
-        
-        <h1>Ürün Ekle</h1>
+    <h1>Ürün Ekle</h1>
 
-        <div class="add-product">
-                
-            <ul class="tab">
-                <li><a class="active" href="javascript:makeItOpen(0);">1. PRODUCT</a></li>
-                <li><a href="javascript:makeItOpen(1);">2. ASSETS</a></li>
-                <li><a href="javascript:makeItOpen(2);">3. INVENSMENT LOG</a></li>
-                <li><a href="javascript:makeItOpen(3);">4. TAGS GROUPS</a></li>
-            </ul>
+    <div class="add-product">
 
-            <form>
+      <ul class="tab">
+        <li>
+          <a class="active" href="javascript:makeItOpen(0);">1. PRODUCT</a>
+        </li>
+        <li>
+          <a href="javascript:makeItOpen(1);">2. ASSETS</a>
+        </li>
+        <li>
+          <a href="javascript:makeItOpen(2);">3. INVENSMENT LOG</a>
+        </li>
+        <li>
+          <a href="javascript:makeItOpen(3);">4. TAGS GROUPS</a>
+        </li>
+      </ul>
 
-                <div id="tab1">
+      <form>
 
-                    <label>Ürün / Proje İsmi</label>
-                    <input #titleInput type="text" name="title" onmouseover="createTip('Ürün / Proje İsmi', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
-                    
+        <div id="tab1">
 
-                    <label>Fiyat</label>
-                    <input #priceInput type="text" name="budget" onmouseover="createTip('Fiyat', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
-
-                    <label>Ürün Açıklaması</label>
-                    <textarea #descriptionInput name="long_desc" rows="14" onmouseover="createTip('Ürün Açıklaması', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"></textarea>
-                    
-                    <label>Proje Tipi</label>
-                    <select #typeInput name="stars" onmouseover="createTip('Proje Tipi', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" > 
-                        <option value="">Proje Tipini Seçiniz.</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5"></option>
-                    </select>
-                   
-                    <label>Ürün/ Proje Logosu</label>
-                    <input #imageUrlInput type="text" name="budget" onmouseover="createTip('Logo', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
-
-                    <label>Zorluk</label>
-                    <select #difficultyInput name="stars" onmouseover="createTip('Zorluk', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" > 
-                        <option value="">Proje Tipini Seçiniz.</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5"></option>
-                    </select>
-
-                    <label>İnternet Sitesi</label>
-                    <input #webUrlInput type="text" name="budget" onmouseover="createTip('İnternet Sitesi', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
-                    
-                    <label>Notlar</label>
-                    <textarea #notesInput name="long_desc" rows="14" onmouseover="createTip('Notlar', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"></textarea>
-                    
-                    <label>Müşteriler</label>
-                    <input #customersInput type="text" name="budget" onmouseover="createTip('Müşteriler', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
-                    
-                    <label>Yatırımcılar</label>
-                    <input #foundersInput type="text" name="budget" onmouseover="createTip('Yatırımcılar', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
-                    
-                    <label>Detay Linki</label>
-                    <input #detailUrlInput type="text" name="budget" onmouseover="createTip('Deaty Linki', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
-                    
-                    <label>KPIList</label>
-                    <input #kpiListInput type="text" name="budget" onmouseover="createTip('KPIList', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
-
-                    <label>Veri Kanalı ID</label>
-                    <select #dataChannelIdInput name="stars" onmouseover="createTip('Zorluk', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" > 
-                        <option value="">Proje Tipini Seçiniz.</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5"></option>
-                    </select>
-
-                    <label>Finansal Seviye ID</label>
-                    <select #financalLevelInput name="stars" onmouseover="createTip('Zorluk', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" > 
-                        <option value="">Proje Tipini Seçiniz.</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5"></option>
-                    </select>
-
-                    <label>Şirket Adı</label>
-                    <input #companyNameInput type="text" name="budget" onmouseover="createTip('Şirket Adı', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
-                </div>
-
-                <div id="tab2">
-
-                    <label>Asset 1 / PDF</label>
-                    <input #fileUrlInput1 type="text" name="budget" onmouseover="createTip('ASSET 1', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
-
-                    <label>Asset 2 / IMAGE</label>
-                    <input #fileUrlInput2 type="text" name="budget" onmouseover="createTip('ASSET 2', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
+          <label>Ürün / Proje İsmi</label>
+          <input #titleInput type="text" name="title" onmouseover="createTip('Ürün / Proje İsmi', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"
+          />
 
 
-                </div>
+          <label>Fiyat</label>
+          <input #priceInput type="text" name="budget" onmouseover="createTip('Fiyat', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"
+          />
 
-                <div id="tab3">
+          <label>Ürün Açıklaması</label>
+          <textarea #descriptionInput name="long_desc" rows="14" onmouseover="createTip('Ürün Açıklaması', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"></textarea>
 
-                    <label>Not</label>
-                    <input #noteInput type="text" name="contact_name" onmouseover="createTip('İletişim Sorumlusu', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
+          <label>Proje Tipi</label>
+          <select #typeInput name="stars" onmouseover="createTip('Proje Tipi', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');">
+            <option value="">Proje Tipini Seçiniz.</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5"></option>
+          </select>
 
-                    <label>Funding Need</label>
-                    <input #fundingNeedInput type="text" name="contact_email" onmouseover="createTip('İletişim Sorumlusu E-mail', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
+          <label>Ürün/ Proje Logosu</label>
+          <input #imageUrlInput type="text" name="budget" onmouseover="createTip('Logo', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"
+          />
 
-                    <label>Valuation</label>
-                    <input #valuationInput type="text" name="project_owner" onmouseover="createTip('Ürün Sorumlusu', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
+          <label>Zorluk</label>
+          <select #difficultyInput name="stars" onmouseover="createTip('Zorluk', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');">
+            <option value="">Proje Tipini Seçiniz.</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5"></option>
+          </select>
 
-                    <label>Score</label>
-                    <input #scoreInput type="text" name="project_email" onmouseover="createTip('Ürün Sorumlusu E-mail', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
+          <label>İnternet Sitesi</label>
+          <input #webUrlInput type="text" name="budget" onmouseover="createTip('İnternet Sitesi', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"
+          />
 
-                    <label>Eval Date</label>
-                    <input #evalDateInput type="text" name="project_email" onmouseover="createTip('Ürün Sorumlusu E-mail', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
+          <label>Notlar</label>
+          <textarea #notesInput name="long_desc" rows="14" onmouseover="createTip('Notlar', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"></textarea>
 
-                    <label>Currency</label>
-                    <input #currencyInput type="text" name="project_email" onmouseover="createTip('Ürün Sorumlusu E-mail', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
+          <label>Müşteriler</label>
+          <input #customersInput type="text" name="budget" onmouseover="createTip('Müşteriler', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"
+          />
 
+          <label>Yatırımcılar</label>
+          <input #foundersInput type="text" name="budget" onmouseover="createTip('Yatırımcılar', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"
+          />
 
-                </div>
+          <label>Detay Linki</label>
+          <input #detailUrlInput type="text" name="budget" onmouseover="createTip('Deaty Linki', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"
+          />
 
-                <div id="tab4">
+          <label>KPIList</label>
+          <input #kpiListInput type="text" name="budget" onmouseover="createTip('KPIList', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"
+          />
 
-                    <label>Ürün / Proje Etiketleri</label>
-                    <input #tagsInput type="text" name="tags" onmouseover="createTip('Ürün / Proje Etiketleri', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
+          <label>Veri Kanalı ID</label>
+          <select #dataChannelIdInput name="stars" onmouseover="createTip('Zorluk', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');">
+            <option value="">Proje Tipini Seçiniz.</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5"></option>
+          </select>
 
-                    <label>Ürün / Proje Grupları</label>
-                    <input #groupsIdsInput type="text" name="tags" onmouseover="createTip('Ürün / Proje Grupları', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');" />
+          <label>Finansal Seviye ID</label>
+          <select #financalLevelInput name="stars" onmouseover="createTip('Zorluk', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');">
+            <option value="">Proje Tipini Seçiniz.</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5"></option>
+          </select>
 
-                </div>
+          <label>Şirket Adı</label>
+          <input #companyNameInput type="text" name="budget" onmouseover="createTip('Şirket Adı', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"
+          />
+        </div>
 
-                <button class="prev" id="tab-prev">Önceki Adım</button>
-                <button class="next" id="tab-next">Sonraki Adım</button>
+        <div id="tab2">
 
-                <a class="done" id="tab-done" (click)="addProduct(titleInput.value, priceInput.value, descriptionInput.value, typeInput.value, imageUrlInput.value, difficultyInput.value, webUrlInput.value, notesInput.value, customersInput.value, foundersInput.value, detailUrlInput.value, kpiListInput.value, dataChannelIdInput.value, financalLevelInput.value, companyNameInput.value, fileUrlInput1.value, fileUrlInput2.value, notesInput.value, fundingNeedInput.value, noteInput.value, scoreInput.value, evalDateInput.value, currencyInput.value, tagsInput.value, groupsIdsInput.value)">Kaydet</a>
+          <label>Asset 1 / PDF</label>
+          <input #fileUrlInput1 type="text" name="budget" onmouseover="createTip('ASSET 1', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"
+          />
 
-            </form> 
+          <label>Asset 2 / IMAGE</label>
+          <input #fileUrlInput2 type="text" name="budget" onmouseover="createTip('ASSET 2', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"
+          />
+          <style>
+            app-file-upload {
+              -ms-flex-align: center;
+              align-items: center;
+            }
+
+            .card {
+              margin: 0 auto;
+            }
+
+            .slimbar-container {
+              padding: 5px;
+            }
+
+          </style>
+          <app-file-upload></app-file-upload>
 
         </div>
 
-        <div class="add-product-tooltip">
-            <h4>Ürün / Proje İsmi</h4>
-            <p>Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.</p>
+        <div id="tab3">
+
+          <label>Not</label>
+          <input #noteInput type="text" name="contact_name" onmouseover="createTip('İletişim Sorumlusu', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"
+          />
+
+          <label>Funding Need</label>
+          <input #fundingNeedInput type="text" name="contact_email" onmouseover="createTip('İletişim Sorumlusu E-mail', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"
+          />
+
+          <label>Valuation</label>
+          <input #valuationInput type="text" name="project_owner" onmouseover="createTip('Ürün Sorumlusu', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"
+          />
+
+          <label>Score</label>
+          <input #scoreInput type="text" name="project_email" onmouseover="createTip('Ürün Sorumlusu E-mail', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"
+          />
+
+          <label>Eval Date</label>
+          <input #evalDateInput type="text" name="project_email" onmouseover="createTip('Ürün Sorumlusu E-mail', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"
+          />
+
+          <label>Currency</label>
+          <input #currencyInput type="text" name="project_email" onmouseover="createTip('Ürün Sorumlusu E-mail', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"
+          />
+
+
         </div>
 
-      </div>
-      <div style="clear:both;"></div>
-    </main>
-    <app-footer></app-footer>
-  
+        <div id="tab4">
+
+          <label>Ürün / Proje Etiketleri</label>
+          <input #tagsInput type="text" name="tags" onmouseover="createTip('Ürün / Proje Etiketleri', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"
+          />
+
+          <label>Ürün / Proje Grupları</label>
+          <input #groupsIdsInput type="text" name="tags" onmouseover="createTip('Ürün / Proje Grupları', 'Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.');"
+          />
+
+        </div>
+
+        <button class="prev" id="tab-prev">Önceki Adım</button>
+        <button class="next" id="tab-next">Sonraki Adım</button>
+
+        <a class="done" id="tab-done" (click)="addProduct(titleInput.value, priceInput.value, descriptionInput.value, typeInput.value, imageUrlInput.value, difficultyInput.value, webUrlInput.value, notesInput.value, customersInput.value, foundersInput.value, detailUrlInput.value, kpiListInput.value, dataChannelIdInput.value, financalLevelInput.value, companyNameInput.value, fileUrlInput1.value, fileUrlInput2.value, notesInput.value, fundingNeedInput.value, noteInput.value, scoreInput.value, evalDateInput.value, currencyInput.value, tagsInput.value, groupsIdsInput.value)">Kaydet</a>
+
+      </form>
+
+    </div>
+
+    <div class="add-product-tooltip">
+      <h4>Ürün / Proje İsmi</h4>
+      <p>Ürünün ismi nasıl girilmelidir, ürünün ismini güzel bir şekilde neden girmek neden önemlidir, buraya yazacağız.</p>
+    </div>
+
+  </div>
+  <div style="clear:both;"></div>
+</main>
+<app-footer></app-footer>
