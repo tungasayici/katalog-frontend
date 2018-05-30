@@ -16,6 +16,7 @@ app.get('/*', function(req,res) {
 app.post('/upload-file', function(req, res, next) {
     var fstream;
     console.log("postladı"); 
+    console.log(req.busboy)
     if (req.busboy) {
   
       req.busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
