@@ -21,6 +21,12 @@ app.get('/*', function(req,res) {
 
 
 app.post('/upload-file', function(req, res, next) {
+
+    console.log("------>>>>>");
+    console.log(req);
+    console.log(res);
+    console.log(next);
+
     var fstream;
     console.log("postladı"); 
     console.log(req.busboy)
