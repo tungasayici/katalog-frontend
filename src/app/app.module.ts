@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 
 
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { SigninComponent } from './pages/signin/signin.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
 
 @NgModule({
   declarations: [
@@ -31,13 +33,15 @@ import { SignupComponent } from './pages/signup/signup.component';
     HeadComponent,
     HomeComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SlimLoadingBarModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
