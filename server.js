@@ -1,6 +1,7 @@
 //Install express server
 const express = require('express');
 const path = require('path');
+var favicon = require('serve-favicon');
 var logger = require('morgan');
 var busboy = require('connect-busboy');
 
