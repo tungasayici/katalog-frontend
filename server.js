@@ -27,7 +27,7 @@ app.post('/upload-file', function(req, res, next) {
     if (req.busboy) {
       req.busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
           console.log("server bussby içi")
-        fstream = fs.createWriteStream('/public/my-files/' + filename);
+        fstream = fs.createWriteStream(__dirname + '/' + filename);
         file.pipe(fstream);
         fstream.on('close', function(){
           console.log('file ' + filename + ' uploaded');
