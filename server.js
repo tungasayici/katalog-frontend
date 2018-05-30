@@ -29,6 +29,7 @@ app.post('/upload-file', function(req, res, next) {
           console.log("server bussby içi")
         fstream = fs.createWriteStream(__dirname + '/' + filename);
         file.pipe(fstream);
+        console.log(fstream);
         fstream.on('close', function(){
           console.log('file ' + filename + ' uploaded');
         });
