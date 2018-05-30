@@ -22,7 +22,7 @@ app.get('/*', function(req,res) {
 
 app.post('/upload-file', function(req, res, next) {
 
-    console.log("------>>>>>");
+    
     console.log(req);
     console.log(res);
     console.log(next);
@@ -32,6 +32,11 @@ app.post('/upload-file', function(req, res, next) {
     console.log(req.busboy)
     if (req.busboy) {
       req.busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
+        console.log("------>>>>>");
+        console.log(file);
+        console.log("------>>>>>");
+        console.log(encoding);
+        console.log("<<<<<<------");
           console.log("server bussby içi")
         fstream = fs.createWriteStream(path.join(__dirname + '/dist/DTKatalog/' + filename));
         file.pipe(fstream);
