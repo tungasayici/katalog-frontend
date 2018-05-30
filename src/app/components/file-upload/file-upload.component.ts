@@ -32,17 +32,21 @@ export class FileUploadComponent implements OnInit {
       switch (event.type) {
         case HttpEventType.Sent:
           this.slimLoadingBarService.start();
+          console.log("başladı");
           break;
         case HttpEventType.Response:
           this.slimLoadingBarService.complete();
           this.message = "Uploaded Successfully";
           this.showMessage = true;
+          console.log("success upload");
           break;
         case 1: {
           if (Math.round(this.uploadedPercentage) !== Math.round(event['loaded'] / event['total'] * 100)){
             this.uploadedPercentage = event['loaded'] / event['total'] * 100;
             this.slimLoadingBarService.progress = Math.round(this.uploadedPercentage);
+            console.log("case 1 math func");
           }
+          console.log("case 1");
           break;
         }
       }
