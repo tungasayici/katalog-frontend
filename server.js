@@ -27,7 +27,7 @@ app.post('/upload-file', function(req, res, next) {
     if (req.busboy) {
       req.busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
           console.log("server bussby içi")
-        fstream = fs.createWriteStream(__dirname + '/public/uploads/' + filename);
+        fstream = fs.createWriteStream(path.join(__dirname + '/dist/DTKatalog/' + filename));
         file.pipe(fstream);
         console.log(fstream);
         fstream.on('close', function(){
