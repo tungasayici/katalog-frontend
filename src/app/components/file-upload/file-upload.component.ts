@@ -26,6 +26,7 @@ export class FileUploadComponent implements OnInit {
     this.showMessage = false;
     console.log(this.selectedFile.name);
     fd.append('file', this.selectedFile, this.selectedFile.name);
+    console.log(fd);
     this.http.post(`/upload-file`, fd, {
       reportProgress: true, observe: 'events'
     }).subscribe( (event: HttpEvent<any>) => {
